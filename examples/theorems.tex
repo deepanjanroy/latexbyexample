@@ -1,0 +1,64 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[chapter] % reset theorem numbering for each chapter
+\newtheorem*{thm*}{Theorem} % Theorems without numbering
+
+\newtheoremstyle{dotless}% name of the style to be used
+  {\topsep}% measure of space to leave above the theorem. E.g.: 3pt
+  {\topsep}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  { }% punctuation between head and body
+  {5pt plus 1 pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+\newtheoremstyle{supercustom}
+	{\topsep}% measure of space to leave above the theorem. E.g.: 3pt
+	{\topsep}% measure of space to leave below the theorem. E.g.: 3pt
+	{\itshape}% name of font to use in the body of the theorem
+	{0pt}% measure of space to indent
+	{\bfseries}% name of head font
+	{}% punctuation between head and body
+	{5pt plus 1 pt minus 1pt}% space after theorem head; " " = normal interword space
+	{\thmname{#1}(This is custom)\thmnumber{ #2} -- \thmnote{#3}}% Manually specify head
+
+
+\theoremstyle{dotless}
+\newtheorem*{superplain}{Theorem}
+
+\theoremstyle{supercustom}
+\newtheorem*{customhspec}{Foobar}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
+\newtheorem{exmp}[thm]{Example} % same for example numbers
+
+\newcommand{\chaptercontent}{
+\section{Basics}
+\begin{defn}Here is a new definition.\end{defn}
+\begin{thm}Here is a new theorem.\end{thm}
+\begin{thm*}Here is theorem without numbering. \end{thm*}
+\begin{superplain}This even gets rid of the last dot. \end{superplain}
+\begin{customhspec}[(notes and stuff)]Even more customizations for theorems \end{customhspec}
+
+\begin{exmp}Here is a good example.\end{exmp}
+\subsection{Some tips}
+\begin{defn}Here is a new definition.\end{defn}
+\section{Advanced stuff}
+\begin{defn}Here is a new definition.\end{defn}
+\subsection{Warnings}
+\begin{defn}Here is a new definition.\end{defn}
+}
+
+\begin{document}
+\tableofcontents
+\part{Addition and Subtraction}
+\chapter{Addition} \chaptercontent
+\chapter{Subtraction} \chaptercontent
+\part{Multiplication and Division}
+\chapter{Multiplication} \chaptercontent
+\chapter{Division} \chaptercontent
+\end{document}

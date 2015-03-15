@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+\usepackage{amsthm}   % use for fancy theorem styles
+\usepackage{amssymb}  % use for symbols, like blackboard bold 
+\usepackage{array}
+
+% don't need the following. simply use defaults
+\setlength{\baselineskip}{16.0pt}    % 16 pt usual spacing between lines
+
+\setlength{\parskip}{3pt plus 2pt}
+\setlength{\parindent}{20pt}
+\setlength{\oddsidemargin}{0.5cm}
+\setlength{\evensidemargin}{0.5cm}
+\setlength{\marginparsep}{0.75cm}
+\setlength{\marginparwidth}{2.5cm}
+\setlength{\marginparpush}{1.0cm}
+\setlength{\textwidth}{150mm}
+
+\newtheoremstyle{dotless}% name of the style to be used
+  {\topsep}% measure of space to leave above the theorem. E.g.: 3pt
+  {\topsep}% measure of space to leave below the theorem. E.g.: 3pt
+  {}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {}% punctuation between head and body
+  {5pt plus 1 pt minus 1pt}% space after theorem head; " " = normal interword space
+  {[\thmname{#1}]\thmnumber{ #2} \thmnote{#3}:}% Manually specify head
+
+\theoremstyle{dotless}
+\newtheorem*{definition}{Definition}
+  
+\pagestyle{empty} % use if page numbers not wanted
+
+% above is the preamble
+\title{Honours Matrix Numerical Analysis}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{definition}[Unitary matrix]
+A square matrix $Q \in \mathbb{C}^{m \times m} $ is unitary (in the real case, we say orthogonal) if $Q^* = Q ^{-1}$, i.e, if $Q Q^* = I$. 
+
+  \[
+    \left[
+    \begin{array}{>{\centering\arraybackslash}m{1in}}
+      $q_1^*$ \\ \hline
+      $q_2^*$\\ \hline
+      $\vdots$ \\ \hline
+      $q_m^*$ \\
+    \end{array}
+    \right]
+  \]
+
+  \[
+    \left[
+    \begin{array}{c}
+       q_1^*  \\ \hline
+      q_2^*\\ \hline
+      \vdots \\ \hline
+      q_m^* \\
+    \end{array}
+    \right]
+  \]
+
+
+\end{definition}
+
+\end{document}
