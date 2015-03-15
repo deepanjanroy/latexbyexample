@@ -1,0 +1,10 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": ".",
+			"file_exclude_patterns": ["*.aux", "*.log", "*.fdb_latexmk", "*.gz", "*.pdf", "*.out"]
+		}
+	]
+}
